@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EtenRennen — Menu</title>
+    <meta name="description" content="Browse the EtenRennen menu and add items to your cart." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900;1000&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body data-page="menu">
+    <header class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="index.html" aria-label="EtenRennen Home">
+            <img class="brand-logo" src="images/logo.png" alt="EtenRennen logo" />
+            <span>
+              <span class="brand-name">EtenRennen</span>
+              <span class="brand-tag">Where Speed Meets Flavor</span>
+            </span>
+          </a>
+
+          <nav class="nav-links" aria-label="Primary">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="menu.html" data-nav="menu">Menu</a>
+            <a href="cart.html" data-nav="cart">Cart</a>
+            <a href="login.html" data-nav="login">Login</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a class="cart-chip" href="cart.html" aria-label="Open cart">
+              <span aria-hidden="true">🛒</span>
+              <b>Cart</b>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" type="button">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="menu.html" data-nav="menu">Menu</a>
+          <a href="cart.html" data-nav="cart">Cart</a>
+          <a href="login.html" data-nav="login">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <div>
+              <h2>Menu</h2>
+              <p>Search, pick a card, and hit “Add to Cart”.</p>
+            </div>
+            <a class="btn btn-ghost" href="cart.html">Go to Cart</a>
+          </div>
+
+          <!-- Search bar -->
+          <div class="search-row" aria-label="Search row">
+            <div class="search" role="search">
+              <div class="icon" aria-hidden="true">🔎</div>
+              <input id="foodSearch" type="search" placeholder="Search burgers, pizza, wraps..." autocomplete="off" />
+            </div>
+            <a class="btn btn-primary" href="index.html#featured">Featured</a>
+          </div>
+
+          <!-- Menu grid (rendered by JS) -->
+          <div class="grid cards" id="menuGrid" aria-label="Menu grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <b>EtenRennen</b>
+            <small>Playful, responsive UI with a fan-inspired mascot. Built using HTML/CSS/JS only.</small>
+          </div>
+          <div>
+            <b>Tip</b>
+            <small>Try typing “pizza” in search — the grid filters instantly.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast" hidden style="
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(23,33,43,0.12);
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 18px 34px rgba(23,33,43,0.12);
+      font-weight: 900;
+      transition: opacity 200ms ease;
+      z-index: 80;
+    "></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+

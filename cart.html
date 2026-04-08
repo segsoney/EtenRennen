@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EtenRennen — Cart</title>
+    <meta name="description" content="Your selected items in the EtenRennen cart." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900;1000&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body data-page="cart">
+    <header class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="index.html" aria-label="EtenRennen Home">
+            <img class="brand-logo" src="images/logo.png" alt="EtenRennen logo" />
+            <span>
+              <span class="brand-name">EtenRennen</span>
+              <span class="brand-tag">Where Speed Meets Flavor</span>
+            </span>
+          </a>
+
+          <nav class="nav-links" aria-label="Primary">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="menu.html" data-nav="menu">Menu</a>
+            <a href="cart.html" data-nav="cart">Cart</a>
+            <a href="login.html" data-nav="login">Login</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a class="cart-chip" href="cart.html" aria-label="Open cart">
+              <span aria-hidden="true">🛒</span>
+              <b>Cart</b>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" type="button">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="menu.html" data-nav="menu">Menu</a>
+          <a href="cart.html" data-nav="cart">Cart</a>
+          <a href="login.html" data-nav="login">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <div>
+              <h2>Your Cart</h2>
+              <p>Adjust quantities, remove items, and checkout (demo).</p>
+            </div>
+            <a class="btn btn-ghost" href="menu.html">Add More</a>
+          </div>
+
+          <div class="cart-wrap" aria-label="Cart layout">
+            <!-- Items -->
+            <div class="panel">
+              <div class="panel-h">
+                <h2>Selected Items</h2>
+                <small style="color:#5b6570; font-weight:900">Tip: Subtotal ≥ ₹20 unlocks a small discount</small>
+              </div>
+              <div class="panel-b">
+                <div id="cartEmpty" class="empty" hidden>
+                  Your cart is empty. Go to the menu and grab a power-up meal!
+                </div>
+                <div id="cartList" aria-label="Cart item list"></div>
+              </div>
+            </div>
+
+            <!-- Totals -->
+            <aside class="panel" aria-label="Totals">
+              <div class="panel-h">
+                <h2>Order Total</h2>
+                <b id="totalBig">₹0.00</b>
+              </div>
+              <div class="panel-b">
+                <div id="cartTotals"></div>
+                <div style="height:12px"></div>
+                <button class="btn btn-primary" id="checkoutBtn" type="button" style="width:100%">
+                  Checkout
+                </button>
+                <div style="height:10px"></div>
+                <small style="color:#5b6570; font-weight:850; line-height:1.5">
+                  Demo checkout: clears localStorage cart and shows a toast.
+                </small>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <b>EtenRennen</b>
+            <small>Cart is powered by localStorage so it persists across page refreshes.</small>
+          </div>
+          <div>
+            <b>Need food?</b>
+            <small><a href="menu.html">Back to menu</a> for more tasty cards.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast" hidden style="
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(23,33,43,0.12);
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 18px 34px rgba(23,33,43,0.12);
+      font-weight: 900;
+      transition: opacity 200ms ease;
+      z-index: 80;
+    "></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+

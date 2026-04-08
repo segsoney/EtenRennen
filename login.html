@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EtenRennen — Login</title>
+    <meta name="description" content="Login to EtenRennen (demo page)." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900;1000&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body data-page="login">
+    <header class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="index.html" aria-label="EtenRennen Home">
+            <img class="brand-logo" src="images/logo.png" alt="EtenRennen logo" />
+            <span>
+              <span class="brand-name">EtenRennen</span>
+              <span class="brand-tag">Where Speed Meets Flavor</span>
+            </span>
+          </a>
+
+          <nav class="nav-links" aria-label="Primary">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="menu.html" data-nav="menu">Menu</a>
+            <a href="cart.html" data-nav="cart">Cart</a>
+            <a href="login.html" data-nav="login">Login</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a class="cart-chip" href="cart.html" aria-label="Open cart">
+              <span aria-hidden="true">🛒</span>
+              <b>Cart</b>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" type="button">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="menu.html" data-nav="menu">Menu</a>
+          <a href="cart.html" data-nav="cart">Cart</a>
+          <a href="login.html" data-nav="login">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="auth-wrap">
+            <div class="panel">
+              <div class="panel-h">
+                <h2>Login</h2>
+                <small style="color:#5b6570; font-weight:900">Demo only</small>
+              </div>
+              <div class="panel-b form">
+                <!-- Major section: Login form -->
+                <h1>Welcome back!</h1>
+                <p>Crash-style guide says: “Log in and keep your order streak going.”</p>
+
+                <form id="loginForm">
+                  <div class="field">
+                    <label for="loginEmail">Email</label>
+                    <input id="loginEmail" type="email" placeholder="you@example.com" required />
+                  </div>
+                  <div class="field">
+                    <label for="loginPassword">Password</label>
+                    <input id="loginPassword" type="password" placeholder="••••••••" required />
+                  </div>
+
+                  <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Login</button>
+                    <a class="btn btn-ghost" href="menu.html">Browse Menu</a>
+                  </div>
+                </form>
+
+                <div class="hint">
+                  Don’t have an account? <a href="signup.html">Create one</a>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notice">
+              <b>Heads up</b>
+              <small>
+                This is a frontend-only demo. Login doesn’t contact a server; it just shows a toast and redirects.
+              </small>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <b>EtenRennen</b>
+            <small>Fan-inspired mascot, modern UI, vanilla JS cart.</small>
+          </div>
+          <div>
+            <b>New here?</b>
+            <small><a href="signup.html">Signup</a> in 10 seconds (demo).</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast" hidden style="
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(23,33,43,0.12);
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 18px 34px rgba(23,33,43,0.12);
+      font-weight: 900;
+      transition: opacity 200ms ease;
+      z-index: 80;
+    "></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+

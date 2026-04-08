@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EtenRennen — Run Fast. Eat Faster.</title>
+    <meta name="description" content="EtenRennen is a playful, gaming-inspired food ordering frontend demo." />
+
+    <!-- Clean typography (lightweight external font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900;1000&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body data-page="home">
+  
+    <!-- Sticky navbar -->
+    <header class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="index.html" aria-label="EtenRennen Home">
+            <img class="brand-logo" src="images/logo.png" alt="EtenRennen logo" />
+            <span>
+              <span class="brand-name">EtenRennen</span>
+              <span class="brand-tag">Where Speed Meets Flavor</span>
+            </span>
+          </a>
+
+          <nav class="nav-links" aria-label="Primary">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="menu.html" data-nav="menu">Menu</a>
+            <a href="cart.html" data-nav="cart">Cart</a>
+            <a href="login.html" data-nav="login">Login</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a class="cart-chip" href="cart.html" aria-label="Open cart">
+              <span aria-hidden="true">🛒</span>
+              <b>Cart</b>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" type="button">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile dropdown nav -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="menu.html" data-nav="menu">Menu</a>
+          <a href="cart.html" data-nav="cart">Cart</a>
+          <a href="login.html" data-nav="login">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-card">
+            <div class="hero-inner">
+              <div class="hero-copy">
+                <div class="tagline"><span class="dot" aria-hidden="true"></span> Eat Fast. Run Faster.</div>
+                <h1>Food delivery with <span class="accent">game-mode energy</span>.</h1>
+                <p>
+                  Pick your power-up meal, dodge hunger, and reach the finish line—deliciously.
+                  This is a frontend demo with a Crash-style mascot guiding your order.
+                </p>
+
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="menu.html">Order Now</a>
+                  <a class="btn btn-ghost" href="#featured">See Featured Foods</a>
+                </div>
+              </div>
+
+              <div class="hero-art" aria-label="Mascot welcome card">
+                <div class="mascot-card">
+                  <div class="mascot-inner">
+                    <img class="mascot-img" src="images/logo.png" alt="Mascot illustration" />
+                    <p class="speech">
+                      Crash says: Grab your food before it spins away!
+                      <small>Tip: Tap “Add to Cart” to start your run.</small>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="hero-stats" aria-label="Quick stats">
+                  <div class="stat">
+                    <b>20–30 min</b>
+                    <span>Speedy delivery</span>
+                  </div>
+                  <div class="stat">
+                    <b>4.5★+</b>
+                    <span>Tasty ratings</span>
+                  </div>
+                  <div class="stat">
+                    <b>Jungle Fresh</b>
+                    <span>Bright flavors</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured foods -->
+      <section class="section" id="featured">
+        <div class="container">
+          <div class="section-title">
+            <div>
+              <h2>Featured Foods</h2>
+              <p>Fast picks to power your next level.</p>
+            </div>
+            <a class="btn btn-ghost" href="menu.html">Open Full Menu</a>
+          </div>
+
+          <!-- Filled by JS (card-based layout) -->
+          <div class="grid cards" id="featuredGrid" aria-label="Featured foods grid"></div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <div>
+              <h2>Customer Reviews</h2>
+              <p>What players say after the final bite.</p>
+            </div>
+          </div>
+
+          <div class="grid reviews" aria-label="Customer reviews">
+            <article class="review">
+              <div class="review-top">
+                <b>Nina</b>
+                <span>★★★★★</span>
+              </div>
+              <p>“The UI is super smooth and the cart works perfectly. Feels like ordering food in a game.”</p>
+            </article>
+            <article class="review">
+              <div class="review-top">
+                <b>Ravi</b>
+                <span>★★★★★</span>
+              </div>
+              <p>“Love the bright jungle vibe. The mascot tip made me smile.”</p>
+            </article>
+            <article class="review">
+              <div class="review-top">
+                <b>Zoë</b>
+                <span>★★★★☆</span>
+              </div>
+              <p>“Cards are clean on mobile. Add-to-cart is instant and beginner-friendly.”</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <img class="footer-logo" src="images/logo.png" alt="EtenRennen logo" />
+              <b>EtenRennen</b>
+            </div>
+            <small>
+              Fast food delivery at your fingertips. Order now and enjoy the taste of EtenRennen!
+            </small>
+          </div>
+
+          <div class="footer-col">
+            <b>Quick Links</b>
+            <ul class="footer-links" aria-label="Quick links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <b>Support</b>
+            <ul class="footer-links" aria-label="Support links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <b>Legal</b>
+            <ul class="footer-links" aria-label="Legal links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <small>© 2026 EtenRennen. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast (small notifications) -->
+    <div id="toast" hidden style="
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(23,33,43,0.12);
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 18px 34px rgba(23,33,43,0.12);
+      font-weight: 900;
+      transition: opacity 200ms ease;
+      z-index: 80;
+    "></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
