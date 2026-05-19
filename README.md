@@ -30,21 +30,28 @@ It provides a smooth and interactive user experience where users can browse food
 ## 📂 Project Structure
 
 ```
-EtenRennen/
+etenrennen-food-ordering/
 │
-├── index.html
-├── menu.html
-├── cart.html
-├── login.html
-├── signup.html
+├── client/                # Frontend
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
 │
-├── css/
-│   └── style.css
+├── server/                # Backend
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── config/
+│   ├── server.js
+│   └── package.json
 │
-├── js/
-│   └── script.js
+├── screenshots/           # Website images for README
 │
-├── images/
+├── .gitignore
+├── README.md
+└── package.json
 ```
 
 ---
